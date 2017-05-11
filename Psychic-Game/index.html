@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>The Psychic Game</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"></head>
+<body>
+
+ <!-- When we start playing the game, our HTML will be placed into this div. -->
+    <div id="game">
+     <p>Guess what letter I'm thinking of!</p>
+
+<!-- # of times the user has guessed the letter correctly -->
+     <p>Wins: <span id="winCount">0</span></p>
+   	 	  <br>
+    	  <br>
+
+<!-- # of times the user has failed to guess the letter correctly after exhausting all of the guesses -->
+	 <p>Losses: <span id="lossCount">0</span></p>
+			<br>
+			<br>
+
+<!-- # of guess left. This will update -->
+	<p>Guesses left: <span id="guessLeft">0</span></p>
+			<br>
+			<br>
+
+<!-- the specific letters that the user typed. Disply these until th euser either wins or loses. -->
+	<p>Your guesses so far: <span id="yourGuessDisplay">0</span></p>
+			<br>
+			<br>
+
+    </div>
+	
+	<script type="text/javascript">
+
+	var computerChoice = ['a', 'b', 'c', 'd', 'e', 'f','g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+	var winCount = document.getElementById("winCount")
+	var winCountCounter = 0;
+
+	var lossCount = document.getElementById("lossCount")
+	var lossCountCounter = 0;
+
+	var guessLeft = document.getElementById("guessLeft")
+	var guessLeftCounter = 0;
+
+	var yourGuess = document.getElementById("yourGuessDisplay");
+
+	var computer = "none";
+
+	for (var i = 0; i < computerChoice.length; i++) {
+		
+	}
+
+      // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+        yourGuess.textContent = event.key;
+
+	var userGuessTrack = event.key;
+
+	var computerGuess = Math.floor(Math.random() * computerChoice.length);
+    if(computerGuess==0)
+
+}
+
+
+</script>
+
+</body>
+</html>
